@@ -19,7 +19,7 @@ this.viewport = function() {
     
     height 
     = isSafariOnIOS 
-    ? Math.max(innerHeight, (navigator.standalone ? innerHeight : ((orientation == 0 || orientation == 90) ? screenHeight - 44 : screenWidth - 32) - 20))
+    ? Math.max(innerHeight, (navigator.standalone ? innerHeight : ((orientation == 0 || orientation == 180) ? screenHeight - 44 : screenWidth - 32) - 20))
     : innerHeight;
 
     return {
