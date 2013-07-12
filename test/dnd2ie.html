@@ -29,7 +29,7 @@
         // this.onmousemove = move;
         // this.onmouseup = drop;
         this.addEventListener('mousemove', move, false);
-        this.addEventListener('mouseup',   drop, false);
+        this.addEventListener('mouseup',   drop, true);
         
         this.offset = {
             x : evt.offsetX,
@@ -46,7 +46,7 @@
         // this.onmousemove = null;
         // this.onmouseup = null;
         this.removeEventListener('mousemove', move, false);
-        this.removeEventListener('mouseup',   drop, false);
+        this.removeEventListener('mouseup',   drop, true);
     }
     
     element.onmousedown = drag;
