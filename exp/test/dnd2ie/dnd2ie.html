@@ -26,10 +26,8 @@
 (function DND(element) {
     
     function drag(evt) {
-        // this.onmousemove = move;
-        // this.onmouseup = drop;
-        this.addEventListener('mousemove', move, false);
-        this.addEventListener('mouseup',   drop, true);
+        this.onmousemove = move;
+        this.onmouseup = drop;
         
         this.offset = {
             x : evt.offsetX,
@@ -43,13 +41,12 @@
     }
     
     function drop(evt) {
-        // this.onmousemove = null;
-        // this.onmouseup = null;
-        this.removeEventListener('mousemove', move, false);
-        this.removeEventListener('mouseup',   drop, true);
+        this.onmousemove = null;
+        this.onmouseup = null;
     }
     
     element.onmousedown = drag;
+    
 })(document.getElementById('sample'));
 
 </script>
